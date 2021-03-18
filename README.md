@@ -2,7 +2,7 @@
 
 The Api has the purpose of expose the information from Clip to process payment translation and Disbursements.
 
-## Characteristics
+## Technologies
 
 * spring-boot 2.3.3
 * Java 8
