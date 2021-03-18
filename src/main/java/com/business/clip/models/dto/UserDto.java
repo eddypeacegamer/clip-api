@@ -3,15 +3,21 @@ package com.business.clip.models.dto;
 import java.io.Serializable;
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 /**
  * @author Eddy
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(Include.NON_NULL)
 public class UserDto implements Serializable {
 
 	private static final long serialVersionUID = 1220625609202085033L;
 
 	private int id;
-	private String nombre;
+	private String name;
 	private Date createTs;
 	private Date lastTs;
 
@@ -23,12 +29,12 @@ public class UserDto implements Serializable {
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Date getCreateTs() {
@@ -49,7 +55,7 @@ public class UserDto implements Serializable {
 
 	@Override
 	public String toString() {
-		return "UserDto [id=" + id + ", nombre=" + nombre + ", createTs=" + createTs + ", lastTs=" + lastTs + "]";
+		return "UserDto [id=" + id + ", name=" + name + ", createTs=" + createTs + ", lastTs=" + lastTs + "]";
 	}
 
 }

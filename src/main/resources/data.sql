@@ -13,3 +13,8 @@ INSERT INTO transaction(id,amount,id_user,card_data,disbursed,create_ts,last_ts)
 INSERT INTO transaction(id,amount,id_user,card_data,disbursed,create_ts,last_ts) VALUES (2,1000.25,1,'20004152895621457448',false,'2021-03-17 00:00:00','2021-03-17 00:00:00');
 INSERT INTO transaction(id,amount,id_user,card_data,disbursed,create_ts,last_ts) VALUES (3,100,2,'111122223334444',false,'2021-03-17 00:00:00','2021-03-17 00:00:00');
 
+------------------------------------
+---Disbursement inserts
+------------------------------------
+INSERT INTO transaction(id,amount,id_user,card_data,disbursed,create_ts,last_ts) VALUES (1,1,25000,'2021-01-01 00:00:00','2021-01-01 00:00:00');
+INSERT INTO transaction(id,amount,id_user,card_data,disbursed,create_ts,last_ts) VALUES (1,1,25000,'2021-02-01 00:00:00','2021-02-01 00:00:00');

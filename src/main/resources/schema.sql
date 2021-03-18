@@ -18,3 +18,12 @@ CREATE TABLE `transaction` (
   `last_ts` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
+
+CREATE TABLE `disbursement` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `amount` decimal(10,2) NOT NULL,
+  `last_ts` timestamp NULL DEFAULT NULL,
+  `create_ts` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
