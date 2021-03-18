@@ -32,12 +32,19 @@ GET_ALL_USERS
 GET /api/v1/users
 Response
 [
+
     {
+    
         "id": 1,
+        
         "name": "Eddy Ramos",
+        
         "createTs": "2021-03-17",
+        
         "lastTs": "2021-03-17"
+        
     }
+    
 ]
 
 GET_USER_BY_ID
