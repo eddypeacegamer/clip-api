@@ -31,6 +31,7 @@ Turning on the apis
 GET_ALL_USERS
 GET /api/v1/users
 Response
+
 [
 
     {
@@ -50,6 +51,7 @@ Response
 GET_USER_BY_ID
 GET api/v1/users/{id}
 Response
+
 {
 
     "id": 1,
@@ -65,6 +67,7 @@ Response
 GET_TRANSACTIONS_BY_USER_ID
 GET api/v1/transactions?clip_user={userId}
 Response
+
 [
 
     {
@@ -90,6 +93,7 @@ Response
 POST_TRANSACTION
 POST api/v1/users/{id}
 Body
+
 {
 
         "amount": 3.14,
@@ -102,6 +106,7 @@ Body
         
 }
 Response
+
  {
  
         "id": 1,
@@ -123,6 +128,7 @@ Response
 GET_DISBURSEMENT
 GET api/v1/disbursement
 Response
+
 [
 
     {
@@ -158,6 +164,7 @@ Response
 POST_DISBURSEMENT
 POST api/v1/disbursement
 Response
+
 [
 
     {
