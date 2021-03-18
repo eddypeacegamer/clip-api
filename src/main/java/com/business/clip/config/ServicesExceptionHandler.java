@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
@@ -11,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.business.clip.models.error.ClipErrorMessage;
 import com.business.clip.models.error.ClipServiceException;
+
 
 /**
  * @author Eddy
@@ -30,7 +32,7 @@ public class ServicesExceptionHandler {
 	}
 
 	@ExceptionHandler(value = ResponseStatusException.class)
-	private ResponseEntity<ClipErrorMessage> handleResponseStatusException(ResponseStatusException ex,
+	private ResponseEntity<ClipErrorMessage> handleException(ResponseStatusException ex,
 			WebRequest request) {
 		log.error("ResponseStatusException", ex);
 		return new ResponseEntity<>(new ClipErrorMessage(ex.getReason(), ex.getMessage(), ex.getStatus().value()),
@@ -38,9 +40,16 @@ public class ServicesExceptionHandler {
 	}
 
 	@ExceptionHandler(value = ClipServiceException.class)
-	private ResponseEntity<ClipServiceException> handleIsbgException(ClipServiceException ex, WebRequest request) {
+	private ResponseEntity<ClipErrorMessage> handleException(ClipServiceException ex, WebRequest request) {
 		log.error("ClipServiceException", ex);
-		return new ResponseEntity<>(ex, HttpStatus.valueOf(ex.getErrorMessage().getHttpStatus()));
+		return new ResponseEntity<>(ex.getErrorMessage(), HttpStatus.valueOf(ex.getErrorMessage().getHttpStatus()));
 	}
 
+	@ExceptionHandler(value = MissingServletRequestParameterException.class)
+	private ResponseEntity<ClipErrorMessage> handleException(MissingServletRequestParameterException ex, WebRequest request) {
+		log.error("MissingServletRequestParameterException", ex);
+		return new ResponseEntity<>(new ClipErrorMessage(ex.getMessage(), ex.getMessage(),HttpStatus.CONFLICT.value()),
+				HttpStatus.CONFLICT);
+	}
+	
 }
