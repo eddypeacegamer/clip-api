@@ -4,6 +4,13 @@
 # Log file
 *.log
 
+# extra files
+*.classpath
+*.factorypath
+*.project
+*.settings/
+*target/
+
 # BlueJ files
 *.ctxt
 
