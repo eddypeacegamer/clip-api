@@ -17,10 +17,12 @@ The Api has the purpose of expose the information from Clip to process payment t
 Turning on the apis
 
 1.- Using the JAR clip-api-0.0.1-SNAPSHOT.jar compiled in the tar folder
+
 2.- Execute the next command in command line : java -jar clip-api-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=local
   A)  -Dspring.profiles.active its the enviroment config
       +Local: using a local H2 database
       +Dev: uses a Db in local (SQL DB)
+      
 3.-Validate that the application is working:
     +http://localhost:8080/api/v1/users  
 
