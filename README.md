@@ -1,6 +1,6 @@
 # clip-api
 
-The Api has the purpose of expose the information from Clip to process payment translation and Disbursements.
+The Api has the purpose of expose the information from Clip to process payment transactions and Disbursements.
 
 ## Technologies
 
