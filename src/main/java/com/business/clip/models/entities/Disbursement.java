@@ -37,7 +37,6 @@ public class Disbursement {
 	private int clipUser;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@LastModifiedDate
 	@CreatedDate
 	@Column(name = "create_ts")
 	private Date createTs;

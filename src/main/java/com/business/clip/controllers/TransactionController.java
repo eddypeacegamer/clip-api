@@ -38,12 +38,12 @@ public class TransactionController {
 		return new ResponseEntity<>(service.postTransaction(transactionDto), HttpStatus.CREATED);
 	}
 	
-	@PostMapping("/disbursement")
+	@PostMapping("/disbursements")
 	public ResponseEntity<List<DisbursementDto>> disburse() {
 		return new ResponseEntity<>(service.disburse(), HttpStatus.CREATED);
 	}
 
-	@GetMapping("/disbursement")
+	@GetMapping("/disbursements")
 	public ResponseEntity<List<DisbursementDto>> getDisbursements() {
 		return new ResponseEntity<>(service.getDisbursements(), HttpStatus.OK);
 	}

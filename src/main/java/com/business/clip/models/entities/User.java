@@ -33,7 +33,6 @@ public class User {
 	private String name;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@LastModifiedDate
 	@CreatedDate
 	@Column(name = "create_ts")
 	private Date createTs;

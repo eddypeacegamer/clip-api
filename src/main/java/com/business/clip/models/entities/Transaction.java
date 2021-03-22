@@ -43,7 +43,6 @@ public class Transaction {
 	private Boolean disbursed;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@LastModifiedDate
 	@CreatedDate
 	@Column(name = "create_ts")
 	private Date createTs;
