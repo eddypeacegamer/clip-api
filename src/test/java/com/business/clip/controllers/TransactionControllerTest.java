@@ -46,7 +46,7 @@ public class TransactionControllerTest {
 	private static List<TransactionDto> transactionDtos;
 	private static List<DisbursementDto> disbursementDtos;
 	private static final String TRANSACTIONS_ENDPOINT = "/api/v1/transactions";
-	private static final String DISBURSEMENT_ENDPOINT = "/api/v1/disbursement";
+	private static final String DISBURSEMENT_ENDPOINT = "/api/v1/disbursements";
 
 	@BeforeClass
 	public static void init() {

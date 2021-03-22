@@ -16,5 +16,5 @@ INSERT INTO transaction(id,amount,id_user,card_data,disbursed,create_ts,last_ts)
 ------------------------------------
 ---Disbursement inserts
 ------------------------------------
-INSERT INTO disbursement(id,amount,id_user,create_ts,last_ts) VALUES (1,1,25000,'2021-01-01 00:00:00','2021-01-01 00:00:00');
-INSERT INTO disbursement(id,amount,id_user,create_ts,last_ts) VALUES (2,1,25000,'2021-02-01 00:00:00','2021-02-01 00:00:00');
+INSERT INTO disbursement(id,amount,id_user,create_ts,last_ts) VALUES (1,25000,1,'2021-01-01 00:00:00','2021-01-01 00:00:00');
+INSERT INTO disbursement(id,amount,id_user,create_ts,last_ts) VALUES (2,25000,1,'2021-02-01 00:00:00','2021-02-01 00:00:00');
