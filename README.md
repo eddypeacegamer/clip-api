@@ -10,11 +10,10 @@ The Api has the purpose of expose the information from Clip to process payment t
 * Mapstruct
 * H2
 * Mysql
-* Cancelado de comprobantes
 
 ## How to use it
 
-Turning on the apis
+Running the Api
 
 1.- Using the JAR clip-api-0.0.1-SNAPSHOT.jar compiled in the tar folder
 
