@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.transaction.Transactional;
 
@@ -74,6 +75,18 @@ public class TransactionService {
 
 	public List<DisbursementDto> getDisbursements() {
 		return disbursementMapper.getDtosFromEntities(disbursementRepository.findAll());
+	}
+	
+	public static void main(String[] args) {
+		List<String> valueList = new ArrayList<String>();
+		valueList.add("Joe");
+		valueList.add("John");
+		valueList.add("Sean");
+
+		long count = valueList.stream().count();
+		Stream<String> stream = valueList.stream();
+		   
+		System.out.println(stream.skip(count - 1).findFirst().get());
 	}
 
 }

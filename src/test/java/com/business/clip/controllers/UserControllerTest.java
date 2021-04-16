@@ -68,7 +68,6 @@ public class UserControllerTest {
 	@Test
 	public void getAllUsers() throws Exception {
 		doReturn(userDtos).when(service).getAllUsers();
-
 		this.mockMvc.perform(get(GET_USERS_ENDPOINT).accept(MediaType.APPLICATION_JSON)).andDo(print())
 				.andExpect(status().isOk());
 	}

@@ -19,7 +19,7 @@ public class TransactionDto implements Serializable {
 
 	private int id;
 	private BigDecimal amount;
-	private int clipUser;
+	private int clipUser; 
 	private String cardData;
 	private Boolean disbursed;
 	private Date lastTs;
